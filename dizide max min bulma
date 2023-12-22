@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define CAN 10
+ int main()
+ {
+ 	int i;
+ 	int max,min;
+ 	int dizi[CAN];
+ 	printf("Lutfen %d kadar deger giriniz\n",CAN);
+ 	for(i=0;i<CAN;i++)
+ 	{
+ 		scanf("%d",&dizi[i]);
+	 }
+	max=min=dizi[0]; // max ve min degerlerini dizinin ilk elemenalarina esitledik
+	for(i=1;i<CAN;i++) //max ve min degerlerini dizinin 2. ELEMANINDAN karsilastirmaya baslamamiz gerektigi icin i=1 dedik
+	{
+		if(dizi[i]>max)
+		{
+			max=dizi[i];
+		}
+		if(dizi[i]<min)
+		{
+			min=dizi[i];
+		}
+	}
+	printf("MAKSIMUM DEGER: %d \n",max);
+	printf("MINIMUM DEGER: %d \n",min);
+
+
+	return 0;
+ }
